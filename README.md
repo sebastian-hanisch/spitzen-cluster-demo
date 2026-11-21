@@ -1,7 +1,6 @@
 # Spitzen-Cluster: der Extremalindex der Wartezeit – Streamlit-Demo
 
-<!-- TODO nach dem Deploy: direkt hierher den Live-Link setzen (Leerzeile davor und danach):
-**[→ Demo live ausprobieren](https://sebastianhanisch-spitzen-cluster-demo.streamlit.app/)** -->
+**[→ Demo live ausprobieren](https://sebastianhanisch-spitzen-cluster-demo.streamlit.app/)**
 
 Demo der Linie **„Extremwerte erklärt“** in der „Konzepte“-Reihe der Website „Sebastian Hanisch – Operations Research und Machine Learning“ (Bereich Statistik, Feld „Seltenes und Extremes“). Die Demos davor in der Linie (von „Das Größte von n“ bis „Pegel statt Index“) setzen voraus, dass die Beobachtungen **unabhängig** sind; diese Demo hebt genau diese Annahme auf (Art der Kante: `fix`, „unabhängig → abhängig“) und besitzt in der Linie die Frage „Abhängigkeit“. **Stationär, aber abhängig:** die Verteilung ändert sich nicht, die Werte hängen aneinander; „stationär“ hebt erst die Demo „Trend“ auf. Vehikel ist die Wartezeit einer **M/M/1-Schlange** (Dienstrate 1, Ankunftsrate ρ = Last, unendlicher Warteraum) und, als zweites exaktes Orakel, der **max-AR(1)-Prozess** mit Fréchet-Rand. Das Modell ist **ausgedacht**: gezeigt wird, was in ihm geschieht, nicht, was das für einen Betrieb heißt.
 
