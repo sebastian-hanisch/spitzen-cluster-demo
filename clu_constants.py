@@ -62,5 +62,5 @@ PRESET_HELP = {
     "Last 90 %: 100 je Cluster": "Last 90 %, 20.000 Kunden, Schwelle bei 1 % der Kunden: θ = 1/100, im Grenzwert im Mittel 100 Überschreitungen je Cluster.",
     "Tagesmaximum: unabhängig gerechnet": "Last 80 %, ein Tag mit 256 Kunden: das exakte Tagesmaximum gegen die Rechnung „als wären die Kunden unabhängig“.",
     "Abdeckung bei Last 80 %": "Last 80 %, 3.000 Kunden, 95-%-Intervall für den Pegel zu p = 10⁻³ je Kunde: Wie oft liegt der wahre Pegel im Intervall, wenn die Abhängigkeit übergangen wird?",
-    "Block gegen Schwelle bei Abhängigkeit": "max-AR(1) mit φ = 0,8 (θ = 0,2): Block-GEV gegen Schwellenweg bei 50 Überschreitungen; die eingefrorenen Läufe zeigen, was die θ-Korrektur leistet.",
+    "Block gegen Schwelle bei Abhängigkeit": "max-AR(1) mit φ = 0,8 (θ = 0,2): Block-GEV gegen POT-Ansatz bei 50 Überschreitungen; die eingefrorenen Läufe zeigen, was die θ-Korrektur leistet.",
 }

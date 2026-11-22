@@ -122,7 +122,7 @@ with st.sidebar:
     n4 = st.select_slider("Kunden je Block", options=C.N4_OPTIONS, key="n4", format_func=thousands, help="Blocklänge in Kunden.")
     st.markdown("**Experiment 5: Block gegen Schwelle**")
     phi5 = st.select_slider("φ des max-AR(1) (θ = 1 − φ)", options=C.PHI5_OPTIONS, key="phi5", format_func=lambda v: de(v, 1), help="φ = 0 sind unabhängige Werte; je größer φ, desto kleiner θ.")
-    k5 = st.select_slider("Überschreitungen k", options=C.K5_OPTIONS, key="k5", help="Zahl der größten Werte, an die der Schwellenweg die GPD anpasst.")
+    k5 = st.select_slider("Überschreitungen k", options=C.K5_OPTIONS, key="k5", help="Zahl der größten Werte, an die der POT-Ansatz (Peaks over Threshold) die GPD anpasst.")
     seed = st.number_input("Zufalls-Seed", *bounds("seed_input"), key="seed_input", step=1, help="Gilt für die Reihe aus Experiment 1 und die Live-Läufe aus Experiment 3.")
     st.button("🎲 Neuen Zufalls-Seed würfeln", width="stretch", on_click=randomize_seed)
 
@@ -335,7 +335,7 @@ Skizze: gegeben $W_0 > u$ ist der Überschuss $\mathrm{Exp}(\gamma)$ (gedächtni
 
 $$\theta = E\left[\,1 - e^{\gamma V};\; V < 0\,\right] = \gamma - \rho\gamma = (1-\rho)^2$$
 
-Numerisch: Der Kern der Kette auf einem Gitter (Zustand 0 und Zellen der Breite $h$) hat bei $u$ den Hauptwert $\lambda_u$ seines abgetöteten Teils; dann ist $\theta(u) = (1-\lambda_u)/\bar F_h(u)$, und $\theta(u) \to (1-\rho)^2$ für $u \to \infty$.
+Numerisch: Der Kern der Kette auf einem Gitter (Zustand 0 und Zellen der Breite $h$) hat bei $u$ den dominanten Eigenwert $\lambda_u$ seines abgetöteten Teils; dann ist $\theta(u) = (1-\lambda_u)/\bar F_h(u)$, und $\theta(u) \to (1-\rho)^2$ für $u \to \infty$.
 
 **Tagesmaximum.** Mit dem Kern $Q$ auf den Zuständen bis $x$ und der stationären Verteilung $\pi$:
 

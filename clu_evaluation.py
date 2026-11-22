@@ -260,8 +260,8 @@ def verdict_block_schwelle(row: dict, k: int):
     th = row["theta"]
     blk, bln = row["block_gev_pegelskala"], row["block_gev_lnskala"]
     text = (f"max-AR(1) mit φ = {de(row['phi'], 1)} (θ = {de(th, 1)}), 50 Blöcke zu 50 Beobachtungen, Ziel der 100-Block-Wert, {thousands(row['R'])} Läufe: die Block-GEV deckt in {pct(blk['abdeckung'])} "
-            f"(Delta-Intervall auf der Pegelskala; ln-Skala {pct(bln['abdeckung'])}). Der Schwellenweg mit {k} Überschreitungen (rechnerisch {de(kk['cluster'], 1)} Cluster) deckt ohne θ in "
+            f"(Delta-Intervall auf der Pegelskala; ln-Skala {pct(bln['abdeckung'])}). Der Peaks-over-Threshold-Ansatz (POT) mit {k} Überschreitungen (rechnerisch {de(kk['cluster'], 1)} Cluster) deckt ohne θ in "
             f"{pct(kk['bereinigt_theta_1']['abdeckung'])}, mit dem exakten θ in {pct(kk['bereinigt_theta_exakt']['abdeckung'])}. "
-            "Das Niveau ist dabei θ-bereinigt (p* statt 1 − 0,99^(1/b)); der Blockweg verliert durch die Abhängigkeit weniger als der Schwellenweg (andere Blocklängen als 50 sind nicht gemessen).")
+            "Das Niveau ist dabei θ-bereinigt (p* statt 1 − 0,99^(1/b)); der Block-Maxima-Ansatz verliert durch die Abhängigkeit weniger als der POT-Ansatz (andere Blocklängen als 50 sind nicht gemessen).")
     kind = "success" if kk["bereinigt_theta_exakt"]["abdeckung"] >= 0.93 else "warning"
     return kind, text

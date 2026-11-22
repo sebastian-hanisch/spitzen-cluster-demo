@@ -97,4 +97,4 @@ def test_verdict_block_schwelle_zahlen_und_schwelle():
     assert "50 Überschreitungen (rechnerisch 10,0 Cluster) deckt ohne θ in 49,1 %, mit dem exakten θ in 82,0 %" in text
     kind125, text125 = E.verdict_block_schwelle(_hrow(), 125)
     assert kind125 == "success" and "125 Überschreitungen (rechnerisch 25,0 Cluster)" in text125 and "93,4 %" in text125
-    assert "weniger als der Schwellenweg" in text and "bleibt die Abhängigkeit ohne Folge" not in text
+    assert "weniger als der POT-Ansatz" in text and "bleibt die Abhängigkeit ohne Folge" not in text
